@@ -1,7 +1,5 @@
 const router = require('express').Router();
 
-console.log(`Initiating User commands...`);
-
 const {
     getAllUsers,
     getUserById,
@@ -29,6 +27,5 @@ router
   .post(addFriend)
   .delete(deleteFriend);
 */
-console.log(`User command successful!`);
 
 module.exports = router;

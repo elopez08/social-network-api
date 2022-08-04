@@ -14,9 +14,7 @@ app.use(routes);
 
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/social-network-API', {
-  useFindAndModify: false,
-  useNewUrlParser: true,
-  useUnifiedTopology: true
+  useNewUrlParser: true
 });
 
 // Use this to log mongo queries being executed!

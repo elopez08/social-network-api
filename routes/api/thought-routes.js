@@ -1,7 +1,5 @@
 const router = require('express').Router();
 
-console.log(`Adding thought commands to the DB....`);
-
 const {
     getAllThoughts,
     getThoughtById,
@@ -15,12 +13,13 @@ const {
 router
   .route('/')
   .get(getAllThoughts)
-  .post(getThoughtById);
+  .post(createNewThought);
+  
 
 // Set up GET one, PUT, and DELETE at /api/users/:id
 router
   .route('/:id')
-  .get(createNewThought)
+  .get(getThoughtById)
   .put(updateThoughtById)
   .delete(removeThoughtById);
 /*
@@ -29,6 +28,5 @@ router
   .post(addFriend)
   .delete(deleteFriend);
 */
-console.log(`Thought commands successful!`);
 
 module.exports = router;
